@@ -2,6 +2,7 @@
 import ordination from '../assets/ordination.jpg';
 import leistungen from '../assets/leistungen.jpg';
 import vereinbarung from '../assets/vereinbarung.jpg';
+import { useCookieStore } from '../stores/cookies';
 </script>
 
 <template>
@@ -48,10 +49,13 @@ import vereinbarung from '../assets/vereinbarung.jpg';
             <h2>STANDORT</h2>
             <p><b>Lage:</b> Die Ordination liegt in verkehrsgünstiger Lage im neu errichteten Südstadtzentrum. Pakrmöglichkeiten sind in der Nähe der Ordination ausreichend vorhanden. Die Ordination ist im 1. Stock und barrierefrei mit einem Lift erreichbar.</p>
             <h2>Öffentliche Erreichbarkeit</h2>
-            <iframe class="hochiframe" id="noShow"
+            <div>
+              <iframe v-if="cookieStore.accepted" class="hochiframe" id="noShow"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1332.395398607328!2d16.307468083643567!3d48.094978964143294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476daf1fa988f1e7%3A0x86b0bed8639c8c8f!2sS%C3%BCdstadtzentrum%201%2F1%2C%202344%20Maria%20Enzersdorf!5e0!3m2!1sde!2sat!4v1605386320573!5m2!1sde!2sat"
                             width="410" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                             tabindex="0"></iframe>
+              <p v-else>Google Maps wird nicht angezeigt. Akzeptiere die Cookies, um diese Funktion zu nutzen.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -75,10 +79,12 @@ export default {
           src: vereinbarung,
           alt: 'ordination3'
         }
-      ]
+      ],
+      cookieStore: useCookieStore()
     }
   },
   mounted() {
+    this.cookieStore.checkCookies();
     console.log();
     let i = 0;
     setInterval(() => {
