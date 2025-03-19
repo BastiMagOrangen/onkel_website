@@ -98,6 +98,8 @@ export default {
   border-radius: 8px;
   padding: 20px;
   z-index: 1000;
+  max-height: 80vh; /* Maximale Höhe relativ zum Viewport */
+  overflow-y: auto;
 }
 
 .cookie-content {
@@ -131,8 +133,7 @@ a:hover {
   margin-top: 15px;
 }
 
-.accept-btn,
-.reject-btn {
+.accept-btn, .reject-btn {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -164,16 +165,16 @@ a:hover {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  width: 60px; /* Etwas größer zum Testen */
-  height: 60px;
-  background-color: #ff0000; /* Rot zum Debuggen, später zurück zu Blau */
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
   color: white;
   border: none;
   border-radius: 50%;
-  font-size: 2rem; /* Größeres Emoji */
+  font-size: 1.5rem;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  z-index: 2000; /* Höher als der Banner, falls es Überlappungen gibt */
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,7 +182,7 @@ a:hover {
 }
 
 .cookie-settings-btn:hover {
-  background-color: #cc0000; /* Dunkleres Rot */
+  background-color: #2980b9;
   transform: scale(1.1);
 }
 
@@ -191,16 +192,35 @@ a:hover {
     bottom: 10px;
     left: 10px;
     right: 10px;
-    max-width: none;
+    max-width: none; /* Volle Breite auf Mobilgeräten */
+    max-height: 50vh; /* Reduzierte Höhe auf Mobilgeräten */
+    padding: 15px; /* Weniger Padding */
+  }
+
+  h3 {
+    font-size: 1.25rem; /* Kleinere Überschrift */
+  }
+
+  p {
+    font-size: 0.9rem; /* Kleinerer Text */
   }
 
   .button-group {
-    flex-direction: column;
+    flex-direction: column; /* Buttons untereinander */
+    gap: 8px;
+  }
+
+  .accept-btn, .reject-btn {
+    padding: 8px 16px; /* Kleinere Buttons */
+    font-size: 0.9rem;
   }
 
   .cookie-settings-btn {
     bottom: 10px;
     left: 10px;
+    width: 40px; /* Kleinerer Button */
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
 </style>
