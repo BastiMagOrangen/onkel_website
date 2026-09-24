@@ -27,7 +27,7 @@ export function ImageCarousel({ slides, intervalMs = 5000 }: { slides: Slide[]; 
           alt={slide.alt}
           className={i === active ? styles.visible : styles.hidden}
           aria-hidden={i !== active}
-          priority={i === 0}
+          loading={i === 0 ? "eager" : "lazy"}
         />
       ))}
       <div className={styles.dots}>

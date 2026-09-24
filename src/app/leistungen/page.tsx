@@ -38,7 +38,7 @@ export default function LeistungenPage() {
           </ul>
         </div>
         <div className="photo sticky">
-          <Image src={room} alt="" sizes="(min-width: 900px) 440px, 100vw" />
+          <Image src={room} alt="" priority sizes="(min-width: 900px) 440px, 100vw" />
         </div>
       </div>
 

@@ -33,7 +33,7 @@ export default function WerdegangPage() {
           </li>
         </ol>
         <div className="photo sticky">
-          <Image src={portrait} alt="" sizes="(min-width: 900px) 440px, 100vw" />
+          <Image src={portrait} alt="" priority sizes="(min-width: 900px) 440px, 100vw" />
         </div>
       </div>
 

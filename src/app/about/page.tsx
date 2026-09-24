@@ -18,7 +18,7 @@ export default function AboutPage() {
           <p>Bereits während meiner Ausbildung entdeckte ich mein Interesse für die Handchirurgie und absolvierte daher mehrere Fortbildungen auf diesem Gebiet. Da ich mich auf diesem Spezialgebiet stark engagierte, wurde mir auch die Möglichkeit geboten, viele einschlägige operative Erfahrungen zu sammeln.</p>
         </div>
         <div className="photo sticky">
-          <Image src={portrait} alt="" sizes="(min-width: 900px) 440px, 100vw" />
+          <Image src={portrait} alt="" priority sizes="(min-width: 900px) 440px, 100vw" />
         </div>
       </div>
 

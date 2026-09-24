@@ -7,8 +7,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { CookieConsentProvider } from "@/lib/cookie-consent";
 import "./globals.css";
 
-const body = Figtree({ subsets: ["latin"], variable: "--font-body", display: "swap" });
-const display = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap" });
+const body = Figtree({ subsets: ["latin"], variable: "--font-body", display: "swap", preload: false });
+const display = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="de" className={`${body.variable} ${display.variable}`}>
+    <html lang="de" data-scroll-behavior="smooth" className={`${body.variable} ${display.variable}`}>
       <body>
         <CookieConsentProvider>
           <SiteHeader />
