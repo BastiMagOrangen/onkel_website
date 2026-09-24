@@ -30,19 +30,20 @@ export function CookieBanner() {
 
   return (
     <section className={styles.banner} role="dialog" aria-labelledby="cookie-titel">
+      <div className={styles.content}>
       <h3 id="cookie-titel">Cookies</h3>
       <p>
         Wir verwenden Cookies auf unserer Seite, um mithilfe von Google Maps den
         Standort der Ordination visuell besser darzustellen.
       </p>
       <p>
-        Dafür benötigen wir eine Einwilligung. Diese können sie auch jederzeit
-        links unten wiederrufen.
+        Dafür benötigen wir eine Einwilligung. Diese können Sie auch jederzeit
+        links unten widerrufen.
       </p>
       <p>
         Unsere Datenschutzerklärung ist hier einsehbar:{" "}
-        <Link prefetch={false} href="/datenschutz/">Datenschutzerklärung</Link>. Wenn sie auf
-        &quot;Cookies akzeptieren&quot; klicken, stimmen sie der Verwendung von
+        <Link prefetch={false} href="/datenschutz/">Datenschutzerklärung</Link>. Wenn Sie auf
+        &quot;Cookies akzeptieren&quot; klicken, stimmen Sie der Verwendung von
         Cookies zu und akzeptieren unsere Datenschutzerklärung.
       </p>
       <p>
@@ -59,6 +60,7 @@ export function CookieBanner() {
         Genauso wie das Recht darauf die Einwilligung zu widerrufen und das
         Recht auf Beschwerde bei der Datenschutzbehörde.
       </p>
+      </div>
       <div className={styles.actions}>
         <button type="button" className="btn" onClick={accept}>
           Cookies akzeptieren

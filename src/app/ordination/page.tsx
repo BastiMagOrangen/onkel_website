@@ -52,7 +52,7 @@ export default function OrdinationPage() {
             <p>Honorarnoten können</p>
             <ul className="ticks">
               <li>bar</li>
-              <li>mit Bankomartkarte</li>
+              <li>mit Bankomatkarte</li>
               <li>mit Kreditkarte</li>
             </ul>
             <p>beglichen werden</p>
@@ -62,7 +62,7 @@ export default function OrdinationPage() {
               <li>Aktuelle Befunde</li>
               <li>Röntgenbilder, MRT, Sonographie, ... (wenn möglich DVD und schriftlicher Befund)</li>
               <li>Dauermedikation</li>
-              <li>Dauerdiagnoesen</li>
+              <li>Dauerdiagnosen</li>
               <li>Voroperation</li>
             </ul>
           </section>
@@ -71,8 +71,8 @@ export default function OrdinationPage() {
         <div className="stack sticky">
           <ImageCarousel slides={SLIDES} />
           <section className="card">
-            <h2>STANDORT</h2>
-            <p><b>Lage:</b> Die Ordination liegt in verkehrsgünstiger Lage im neu errichteten Südstadtzentrum. Pakrmöglichkeiten sind in der Nähe der Ordination ausreichend vorhanden. Die Ordination ist im 1. Stock und barrierefrei mit einem Lift erreichbar.</p>
+            <h2>Standort</h2>
+            <p><b>Lage:</b> Die Ordination liegt in verkehrsgünstiger Lage im neu errichteten Südstadtzentrum. Parkmöglichkeiten sind in der Nähe der Ordination ausreichend vorhanden. Die Ordination ist im 1. Stock und barrierefrei mit einem Lift erreichbar.</p>
             <h2>Öffentliche Erreichbarkeit</h2>
             <MapEmbed />
           </section>

@@ -11,6 +11,8 @@ const body = Figtree({ subsets: ["latin"], variable: "--font-body", display: "sw
 const display = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap", preload: false });
 
 export const metadata: Metadata = {
+  description:
+    "Ordination Dr. Clemens Seidl in Maria Enzersdorf: Facharzt für Orthopädie und Traumatologie (Wahlarzt). Konservative und operative Behandlung, Termine nach telefonischer Vereinbarung oder online.",
   title: {
     default: "Ordination Dr. Clemens Seidl",
     template: "%s | Ordination Dr. Clemens Seidl",

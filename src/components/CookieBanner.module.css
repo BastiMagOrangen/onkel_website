@@ -6,7 +6,8 @@
   right: 1rem;
   max-width: 500px;
   max-height: 80vh;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -15,11 +16,12 @@
   font-size: 0.95rem;
   line-height: 1.55;
 }
+.content { overflow-y: auto; min-height: 0; }
 .banner h3 { margin: 0 0 0.5rem; font-size: 1.4rem; }
 .banner h4 { margin: 1rem 0 0.4rem; color: var(--teal-900); }
 .banner p { margin: 0 0 0.6rem; }
 
-.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; flex-shrink: 0; }
 .actions :global(.btn) { padding: 0.65rem 1.2rem; font-size: 0.95rem; }
 
 .settings {

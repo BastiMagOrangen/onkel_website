@@ -25,6 +25,13 @@ export default function HomePage() {
               <Icon name="mail" />
               <p>Email: <a href="mailto:ordination@dr-seidl.at">ordination@dr-seidl.at</a></p>
             </li>
+            <li>
+              <Icon name="clock" />
+              <p>
+                <b>Ordinationszeiten:</b> Dienstag 14 – 20 Uhr sowie nach Bedarf<br />
+                Telefonisch erreichbar Montag bis Freitag 14 – 19 Uhr
+              </p>
+            </li>
           </ul>
 
           <p className={styles.note}>Termine nur nach telefonischer Vereinbarung oder online</p>
