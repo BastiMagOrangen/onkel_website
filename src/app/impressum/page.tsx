@@ -1,40 +1,24 @@
-<script setup>
-</script>
+import type { Metadata } from "next";
 
-<template>
-    <main>
-        <div class="container">
+export const metadata: Metadata = { title: "Impressum" };
+
+export default function ImpressumPage() {
+  return (
+    <div className="page wrap">
+      <div className="page-head">
         <h1>Impressum</h1>
+      </div>
+
+      <div className="card prose">
         <p>Information gemäß §5 E-Commerce-Gesetz und Offenlegung gemäß §25 Mediengesetz</p>
         <p>Diensteanbieter und Medieninhaber: Dr. Clemens Seidl</p>
         <p>Südstadtzentrum 1/5/1, 2344 Maria Enzersdorf</p>
-        <p>Email: <a href="mailto:ordination@dr-seidl.at" id="mail">ordination@dr-seidl.at</a></p>
-        <b>Haftungsausschluss:</b>
+        <p>Email: <a href="mailto:ordination@dr-seidl.at">ordination@dr-seidl.at</a></p>
+        <h3>Haftungsausschluss:</h3>
         <p>Dr. Clemens Seidl übernimmt keine Verantwortung oder Haftung für die Aktualität und Richtigkeit sowie Vollständigkeit der Inhalte. Insofern kann Dr. Clemens Seidl für keinerlei Schäden, die sich aus der Nutzung des Inhalts ergeben können, haftbar gemacht werden. Für die Richtigkeit der gebotenen Informationen und der von anderen Diensten übernommenen Daten wird keine Gewähr übernommen.</p>
-        <b>Links zu externen Websites</b>
+        <h3>Links zu externen Websites</h3>
         <p>Hiermit distanziert sich Dr. Clemens Seidl ausdrücklich von allen Inhalten aller gelinkten Seiten auf seiner Website. Für den Inhalt dieser gelinkten Seiten übernimmt er keine Verantwortung. Verantwortlich für den Inhalt dieser Links ist der Betreiber der jeweiligen Internet-Angebote.</p>
+      </div>
     </div>
-    </main>
-</template>
-
-<style scoped>
-.container {
-  text-align: left !important;
-  background: #c6dada;
-  font-family: 'Roboto', sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem;
+  );
 }
-
-.container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.container p {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-</style>

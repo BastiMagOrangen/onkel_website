@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.5rem, 7vw, 6rem) 0;
+  background:
+    radial-gradient(60rem 40rem at 90% 0%, var(--teal-100), transparent 70%),
+    radial-gradient(40rem 30rem at 0% 100%, var(--teal-50), transparent 70%);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .grid { grid-template-columns: 1.05fr 0.95fr; }
+}
+
+.text h1 { margin-bottom: 1.2rem; }
+
+.contact { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; gap: 0.7rem; }
+.contact li { display: flex; gap: 0.9rem; align-items: flex-start; }
+.contact li svg {
+  flex: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.55rem;
+  border-radius: 50%;
+  background: var(--teal-900);
+  color: #fff;
+}
+.contact p { margin: 0; align-self: center; }
+
+.note { font-weight: 600; color: var(--teal-900); margin-bottom: 1.4rem; }
+
+.media { position: relative; }
+.media::before {
+  content: "";
+  position: absolute;
+  inset: 8% -5% -6% 10%;
+  border-radius: 32px;
+  background: var(--teal-500);
+  opacity: 0.35;
+  transform: rotate(3deg);
+}
+.portrait { position: relative; border-radius: 28px; }

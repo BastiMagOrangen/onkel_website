@@ -1,0 +1,17 @@
+.map {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.placeholder {
+  margin: 0;
+  padding: 1.5rem;
+  border: 2px dashed var(--teal-500);
+  border-radius: var(--radius);
+  background: var(--teal-50);
+  color: var(--teal-900);
+}

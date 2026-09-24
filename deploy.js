@@ -101,10 +101,7 @@ async function deploy() {
 
         console.log("Uploading files...")
 
-        await withRetry(() => client.uploadFromDir("dist"), "Upload dist", { reconnect })
-        if (fs.existsSync("./.htaccess")) {
-            await withRetry(() => client.uploadFrom("./.htaccess", ".htaccess"), "Upload .htaccess", { reconnect })
-        }
+        await withRetry(() => client.uploadFromDir("out"), "Upload out", { reconnect })
 
         console.log("Deployment completed successfully.")
     } catch (err) {
